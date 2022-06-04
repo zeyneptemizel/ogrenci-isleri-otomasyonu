@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        
+        <link rel="stylesheet" href="index.css" />
+
+        <title>STUDENT AFFAIRS AUTOMATION</title>
+    </h:head>
+    
+    <h:body class="backgrounds">
+        <section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-4"></div>
+      <div class="col-md-5">
+        <img  src="logomuz1.png"
+             class="img-fluid" alt="logo"> </img>
+      </div>
+        <div class="col-md-3"></div>
+        
+        
+        <!-- öğrenci girişi -->
+      <div class="col-md-4 ">
+        <h:form>
+            
+            <h4> STUDENT LOGIN </h4>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form1Example13">TC:</label>
+            <h:inputText  p:placeholder="TC no" class="form-control form-control-lg" required="true" requiredMessage="enter valid TC" value="#{user.STC}" />
+          </div>
+          <!-- Email input -->
+
+
+          
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form1Example23">Password:</label>
+            <h:inputSecret p:type="password" id="inputPassword" p:placeholder="Password" class="form-control form-control-lg" required="true" requiredMessage="enter password" value="#{user.SPASSWORD}" />
+          </div>
+          <!-- Password input -->
+          
+
+       
+
+          <!-- Submit button -->
+          <h:commandButton style="background-color: #999999" value="Sign in" class="btn btn-primary btn-lg btn-block" action="#{user.verifyS()}"/>
+          <div class="divider d-flex align-items-center my-4">
+            
+</div>
+        </h:form>
+      </div>
+        
+        <!-- öğrenci girişi -->
+        
+        
+        
+        
+        <!-- öğretmen girişi -->
+        <!--<div class="col-md-7"></div> -->
+        <div class="col-md-4 ">
+        <h:form>
+            
+            <h4> TEACHER LOGIN </h4>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form1Example13">TC:</label>
+            <h:inputText  p:placeholder="TC no" class="form-control form-control-lg" required="true" requiredMessage="enter valid TC" value="#{user.TTC}" />
+          </div>
+          <!-- Email input -->
+
+
+          
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form1Example23">Password:</label>
+            <h:inputSecret p:type="password" id="inputPassword" p:placeholder="Password" class="form-control form-control-lg" required="true" requiredMessage="enter password" value="#{user.TPASSWORD}" />
+          </div>
+          <!-- Password input -->
+          
+
+       
+
+          <!-- Submit button -->
+          <h:commandButton style="background-color: #999999" value="Sign in" class="btn btn-primary btn-lg btn-block" action="#{user.verifyT()}"/>
+          <div class="divider d-flex align-items-center my-4">
+            
+</div>
+        </h:form>
+      </div>
+        
+        
+        
+    </div>
+  </div>
+</section>
+    </h:body>
+		
+
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>XHTML MP Tutorial</title>
+  </head>
+
+  <body>
+    <h1>Registration Form</h1>
+    <form method="get" action="processing.asp">
+      <p>
+        Username:<br/>
+        <input name="username"/><br/>
+
+        Password:<br/>
+        <input type="password" name="password"/><br/>
+
+        Gender:<br/>
+        <input type="radio" name="gender" value="m"/>Male
+        <input type="radio" name="gender" value="f"/>Female<br/>
+
+        Country:<br/>
+        <select name="country">
+          <option value="ca">Canada</option>
+          <option value="cn">China</option>
+          <option value="fr">France</option>
+          <option value="de">Germany</option>
+          <option value="in">India</option>
+          <option value="it">Italy</option>
+          <option value="jp">Japan</option>
+          <option value="kr">Korea</option>
+          <option value="uk">United Kingdom</option>
+          <option value="us">United States</option>
+        </select><br/>
+
+        Which part of our XHTML MP tutorial do you like?<br/>
+        <input type="checkbox" name="tutorial_part" value="1"/>Part 1
+        <input type="checkbox" name="tutorial_part" value="2"/>Part 2
+        <input type="checkbox" name="tutorial_part" value="3"/>Part 3
+        <input type="checkbox" name="tutorial_part" value="4"/>Part 4
+
+        <input type="hidden" name="temp_id" value="123456"/>
+      </p>
+
+      <hr/>
+
+      <p>
+        <input type="submit"/>
+        <input type="reset"/>
+      </p>
+    </form>
+  </body>
+</html>

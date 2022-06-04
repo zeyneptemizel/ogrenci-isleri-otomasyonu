@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title> -> Student Affairs </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>       
+        <link rel="stylesheet" href="logincorrect.css"/>
+    </head>
+    <body>
+     
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>PA Okulları</h3>
+                    <strong>PA</strong>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="Tlogincorrect.xhtml">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Institution Page
+                        </a>
+                        
+                    </li>
+                    <li>
+                        
+                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-duplicate"></i>
+                            CLASSES
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="Tclasses.xhtml">MARKING TOOL</a></li>
+                            <li><a href="classinfo.xhtml">CLASS INFO</a></li>
+                        </ul>
+                        
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- BAHA YUKARSI BURDA-->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">                                                      
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style="background-color: #304c5b">
+                                <i  class="glyphicon glyphicon-align-left"></i>
+                                <span>Toggle Sidebar</span>
+                            </button>
+                            <br></br>               
+                            <p>+1-202-555-0150</p>
+                            <p>7899 Saxton Ave.</p>
+                            <p>Virginia Beach, VA 23451</p> 
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li> <img src="logomuz1.png" style="height: 150px"></img> </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <h2>GRADUTION 2021 WAS WILD!</h2>
+                <img src="gradution.jpg" style='height: 50%; width: 50%; object-fit: contain;  float:left;'>  </img>
+                <p style="text-align: justify; margin-left: 590px; margin-right: 10px"> Luck is great, but life is meant to be experienced. Sometimes the only way out of stress is through it; face struggle to overcome challenges in life. Many times battle happens to help teach us a lesson. 
+                    We can either learn from that lesson or deny it. </p>
+                <p style="text-align: justify; margin-left: 590px; margin-right: 10px; margin-top: 20px">           
+                From an evolutionary perspective, the human mind's primary goal is to keep you safe. Sometimes this leads to self-sabotage as it's just easier to stay in your comfort zone and avoid risk. However, great things never come from mediocrity. Quit settling for average and strive for extraordinary.
+            </p>   <p style="text-align: justify; margin-left: 590px; margin-right: 10px; margin-top: 20px">
+Below are words I've written down inspired by powerful survivors. As a keynote speaker, I meet many people who have survived and thrived in misfortune. The following is a starting point for.  </p>
+            <p style="margin-left:1050px">-Steve Jobs</p>
+                
+                
+
+                 </div>
+        </div>
+
+
+
+
+        <!-- JAVASCRIP KISMI -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+ </body>
+</html>

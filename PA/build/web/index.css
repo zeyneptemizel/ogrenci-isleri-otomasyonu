@@ -1,0 +1,22 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-May-2022, 17:09:51
+    Author     : cagatay
+*/
+
+.backgrounds { background: rgb(222,222,219);
+background: radial-gradient(circle, rgba(222,222,219,1) 0%, rgba(171,176,177,1) 40%, rgba(222,221,219,1) 100%, rgba(0,212,255,1) 100%); }
+
+
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}

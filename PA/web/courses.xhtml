@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title> -> Student Affairs </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>       
+        <link rel="stylesheet" href="logincorrect.css"/>
+    </head>
+    <body>
+     
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>PA Okulları</h3>
+                    <strong>PA</strong>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="logincorrect.xhtml">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Institution Page
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="courseselect.xhtml">
+                            <i class="glyphicon glyphicon-briefcase"></i>
+                            Course Select
+                        </a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-duplicate"></i>
+                            Student
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="courses.xhtml">Courses</a></li>
+                            <li><a href="ogrenci.xhtml">MY PAGE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- BAHA YUKARSI BURDA-->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">                                                      
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style="background-color: #304c5b">
+                                <i  class="glyphicon glyphicon-align-left"></i>
+                                <span>Toggle Sidebar</span>
+                            </button>
+                            <br></br>               
+                            <p>+1-202-555-0150</p>
+                            <p>7899 Saxton Ave.</p>
+                            <p>Virginia Beach, VA 23451</p> 
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li> <img class="rounded float-right" src="logomuz1.png" style="height: 150px"></img> </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                
+                <div id="content" class="col-6">
+                    <p style=" font-size: 27px"> YOU CAN SEE YOUR COURSES HERE. IF YOU THINK YOUR GRADE IS UNFAIR, CONSULT IT WITH YOUR TEACHER!</p>
+                    
+                    <h:form>
+                        <h:dataTable class="table table-striped col-md-4" value="#{user.dersGor()}" var = "rs3" >
+                            <h:column >
+                                <f:facet name="header">CLASS CODE</f:facet> 
+                                    #{rs3.CID}  
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">CLASS NAME</f:facet> 
+                                    #{rs3.CLASSNAME}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">MIDTERM</f:facet> 
+                                    #{rs3.MIDTERM}  
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">FINAL</f:facet> 
+                                    #{rs3.FINAL}  
+                            </h:column>
+             
+                
+                        </h:dataTable>
+                        
+                        
+
+                    </h:form>
+                    
+                 
+                </div>
+
+                
+                
+                
+
+                 </div>
+        </div>
+
+
+
+
+        <!-- JAVASCRIP KISMI -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+ </body>
+</html>
